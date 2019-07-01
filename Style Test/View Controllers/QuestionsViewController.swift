@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  QuestionsViewController.swift
 //  Style Test
 //
 //  Created by Denis Bystruev on 01/07/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuestionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

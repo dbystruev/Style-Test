@@ -10,11 +10,14 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
+    // MARK: Outlets
     @IBOutlet var styleLabel: UILabel!
     @IBOutlet var styleImageView: UIImageView!
     
+    // MARK: - UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
         let randomIndex = Int.random(in: 0 ..< Style.all.count)
         let style = Style.all[randomIndex]
         styleLabel.text = style.name

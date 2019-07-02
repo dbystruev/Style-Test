@@ -10,6 +10,6 @@ import UIKit
 
 struct Answer {
     let text: String
-    let styleID: Int
+    let styles: [Int]
     let images: [UIImage]
 }

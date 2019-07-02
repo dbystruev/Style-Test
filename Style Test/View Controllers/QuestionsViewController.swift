@@ -9,10 +9,18 @@
 import UIKit
 
 class QuestionsViewController: UIViewController {
+    
+    let questions = Question.all
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        for question in questions {
+            print(#line, #function, question.text)
+            for answer in question.answers {
+                print(answer)
+            }
+            print()
+        }
     }
 
 

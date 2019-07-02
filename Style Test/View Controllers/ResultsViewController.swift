@@ -14,13 +14,18 @@ class ResultsViewController: UIViewController {
     @IBOutlet var styleLabel: UILabel!
     @IBOutlet var styleImageView: UIImageView!
     
+    var styleIDs = [Int]()
+    
     // MARK: - UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        var styleRating = [Int: Int]()
+        styleIDs.forEach { styleRating[$0] = (styleRating[$0] ?? 0) + 1 }
+        let topStyleID = styleRating.sorted(by: { $0.value > $1.value }).first!.key
+        let topStyle = Style.all.first(where: { $0.id == topStyleID })!
+        
         navigationItem.hidesBackButton = true
-        let randomIndex = Int.random(in: 0 ..< Style.all.count)
-        let style = Style.all[randomIndex]
-        styleLabel.text = style.name
-        styleImageView.image = style.images.first
+        styleLabel.text = topStyle.name
+        styleImageView.image = topStyle.images.first
     }
 }

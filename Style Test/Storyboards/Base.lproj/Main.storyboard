@@ -50,28 +50,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LabelCell" id="4yc-4s-COg">
-                                        <rect key="frame" x="0.0" y="99.5" width="374" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4yc-4s-COg" id="jd4-9L-S6d">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHS-hu-FqN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="23.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="FHS-hu-FqN" firstAttribute="leading" secondItem="jd4-9L-S6d" secondAttribute="leading" id="AIb-Q1-3GS"/>
-                                                <constraint firstItem="FHS-hu-FqN" firstAttribute="top" secondItem="jd4-9L-S6d" secondAttribute="top" id="DSz-cx-MzS"/>
-                                                <constraint firstAttribute="trailing" secondItem="FHS-hu-FqN" secondAttribute="trailing" id="MM1-bU-5lj"/>
-                                                <constraint firstAttribute="bottom" secondItem="FHS-hu-FqN" secondAttribute="bottom" constant="20" id="n44-Rn-5p4"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWA-Yj-0gT">
@@ -102,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос № 1 из 1" id="a52-rf-b5d"/>
                     <connections>
+                        <outlet property="nextQuestionButton" destination="LWA-Yj-0gT" id="9D0-Em-Zbv"/>
                         <outlet property="progressView" destination="91b-TL-WX3" id="g5m-ea-rUY"/>
                         <outlet property="questionLabel" destination="4yU-9I-Tdl" id="YwO-Mh-YK8"/>
                         <outlet property="tableView" destination="nur-dA-FFp" id="7Oc-Zi-BE2"/>
